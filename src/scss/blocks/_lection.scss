@@ -1,0 +1,26 @@
+.lection {
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiv-value('gap', 64, 24, 1);
+        
+        @media (max-width: $md3+px)  {
+            flex-direction: column;
+        }
+    }
+    &__image {
+        min-width: toRem(280);
+        @media (min-width: $md1+px)  {
+            flex: 0 0 toRem(394);
+        }
+        img {
+            width: 100%;
+            border-radius: 100%;
+        }
+    }
+}
+

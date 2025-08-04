@@ -1,0 +1,65 @@
+.mainscreen {
+    position: relative;
+    min-height: toRem(773);
+    @include adaptiv-value('padding-top', 124, 90, 1);
+    @media (min-width: $md3+px)  {
+        min-height: toRem(700);
+    }
+    .ibg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        &_mobile {
+            display: none;
+            background-position-x: 70%;
+            @media (max-width: $md3+px)  {
+                display: block;
+            }
+        }
+        &_desktop {
+            @media (max-width: $md3+px)  {
+                display: none;
+            }
+        }
+    }
+    &__container {
+        height: 100%;
+    }
+
+    &__body {
+        //max-width: 100%;
+        @media (min-width: $md4+px)  {
+            max-width: toRem(480);
+        }
+        @media (min-width: $md3+px)  {
+            max-width: toRem(520);
+        }
+        @media (min-width: 1165px)  {
+            max-width: toRem(542);
+        }
+    }
+
+    &__descr {
+        font-size: 18px;
+        line-height: 130%;
+        margin-top: toRem(24);
+        @media (min-width: $md3+px)  {
+            text-align: center;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: toRem(16);
+        margin-top: toRem(40);
+        @media (max-width: $md4+px)  {
+            flex-direction: column;
+            margin-top: toRem(32);
+        }
+    }
+}
+

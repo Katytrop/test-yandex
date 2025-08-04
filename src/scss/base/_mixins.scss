@@ -21,5 +21,9 @@
   }
 
 @function toRem($value) {
-  @return #{($value * 1px / $font-size)}rem;
+  @return ($value / $font-size) * 1rem;
 }
+
+// @function toRem($value) {
+//   @return calc(#{$value} / #{$font-size} * 1rem);
+// }

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('html/head.html', {
-        "title": "Клуб четырех коней"
-    })
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Клуб четырех коней</title>
+</head>
 <body>
     <div class="wrapper">
-        @@include('html/header.html', {})
+        <header class="header">
+    <div id="header" class="header__container container">
+        <a href="#header" class="header__logo">
+            <img src="img/logo.png" alt="logo">
+        </a>
+    </div>
+</header>
 
         <main class="page">
             <section class="page__mainscreen mainscreen">
                 <div class="mainscreen__bg">
                     <div class="ibg ibg_desktop">
-                        <img src="@img/mainscreen.png" alt="img">
+                        <img src="img/mainscreen.png" alt="img">
                     </div>
                     <div class="ibg ibg_mobile">
-                        <img src="@img/mainscreen-mobile.png" alt="img">
+                        <img src="img/mainscreen-mobile.png" alt="img">
                     </div>
                 </div>
                 <div class="mainscreen__container container">
@@ -55,7 +66,7 @@
                             <p>посетите лекцию на тему: <span class="title_red">«Плодотворная дебютная идея»</span></p>
                         </div>
                         <div class="lection__image">
-                            <img src="@img/lection.png" alt="img">
+                            <img src="img/lection.png" alt="img">
                         </div>
                    </div>
                 </div>
@@ -81,7 +92,9 @@
 
         </main>
 
-        @@include('html/footer.html', {})
+        <footer class="footer">
+    
+</footer>
 
 
     </div>
