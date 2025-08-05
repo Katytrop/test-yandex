@@ -74,6 +74,12 @@ body {
 			padding-top: toRem(48);
 		}
 	}
+	&__session {
+		padding-top: toRem(64);
+		@media (max-width: $md3+px)  {
+			padding-top: toRem(34);
+		}
+    }
 }
 
 
@@ -82,6 +88,7 @@ body {
 @import 'blocks/mainscreen';
 @import 'blocks/running';
 @import 'blocks/lection';
+@import 'blocks/session';
 
 
 // Подключаем блоки сайта =================================================================================================

@@ -19,12 +19,20 @@
     &_black {
         background: $blackBtn;
         color: #fff;
+        &:hover {
+            background: $yellowColor;
+            color: $mainColorText;
+        }
 	}
 
     &_light {
         background: transparent;
         border: 2px solid $blackBtn;
         color: inherit;  
+        &:hover {
+            background: $blackBtn;
+            color: #fff;
+        }
         @media (max-width: $md3+px)  {
             background: #fff;
             opacity: 0.9;
@@ -72,10 +80,6 @@
             display: inline;
         }
     }
-    &_red {
-        color: $redColor;
-        letter-spacing: 0.8px;
-    }
     &_contents {
         @media (max-width: $md3+px)  {
             display: contents;
@@ -85,5 +89,12 @@
                 }
             }
         }
+    }
+    .red {
+        color: $redColor;
+        font-weight: 700;
+    }
+    .name {
+        white-space: nowrap;
     }
 }
