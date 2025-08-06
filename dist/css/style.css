@@ -873,6 +873,7 @@ body {
 @media (max-width: 479.98px) {
   .steps__image {
     width: 100%;
+    opacity: 1;
   }
   .steps__image img {
     width: 100%;

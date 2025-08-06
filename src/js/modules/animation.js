@@ -40,6 +40,8 @@ window.addEventListener('load', () => {
 
 //plant
 document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 479.98) return;
+
     const target = document.querySelector('#steps');
     const plane = document.querySelector('.steps__image');
 
