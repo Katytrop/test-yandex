@@ -43,8 +43,8 @@
         border: 1px solid $blueColor;
         border-radius: 62px;
         padding: 0 toRem(12);
-        width: toRem(113);
-        min-height: toRem(35);
+        width: toRem(113) !important;
+        min-height: toRem(35) !important;
         background: none;
         color: $blueColor;
         &:hover {
