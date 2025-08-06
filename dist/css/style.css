@@ -144,7 +144,7 @@ h6 {
   background: #1f1f1f;
   color: #fff;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1300px) {
   .btn_light {
     background: #fff;
     opacity: 0.9;
