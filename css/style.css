@@ -153,8 +153,8 @@ h6 {
   border: 1px solid #3057a2;
   border-radius: 62px;
   padding: 0 0.6rem;
-  width: 5.65rem;
-  min-height: 1.75rem;
+  width: 5.65rem !important;
+  min-height: 1.75rem !important;
   background: none;
   color: #3057a2;
 }
