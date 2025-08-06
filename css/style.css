@@ -948,7 +948,7 @@ body {
   }
 
   .no-webp .step {
-    background-image: url("/img/bg.png"); }
+    background-image: url("../img/bg.png"); }
 
   .step {
     -webkit-box-flex: 1;
@@ -1004,6 +1004,14 @@ body {
 
   .mainscreen__chess {
     left: 180px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .btn_light {
+    background: #fff;
+    opacity: 0.9;
+    border: none;
   }
 }
 
@@ -1091,7 +1099,7 @@ body {
   }
 
   .no-webp .steps__item {
-    background-image: url("/img/bg.png"); }
+    background-image: url("../img/bg.png"); }
 
   .steps__item {
     -webkit-box-orient: vertical;
@@ -1141,12 +1149,6 @@ body {
     width: 100%;
     min-height: 2.35rem;
     padding: 0 1rem;
-  }
-
-  .btn_light {
-    background: #fff;
-    opacity: 0.9;
-    border: none;
   }
 
   .title_middle {
@@ -1322,10 +1324,10 @@ body {
 
 @media (min-width: 991.98px) {
 
-  .webp .step { background-image: url(/img/bg.webp); }
+  .webp .step { background-image: url(../img/bg.webp); }
 }
 
 @media (max-width: 991.98px) {
 
-  .webp .steps__item { background-image: url(/img/bg.webp); }
+  .webp .steps__item { background-image: url(../img/bg.webp); }
 }
