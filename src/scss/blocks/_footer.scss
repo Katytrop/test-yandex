@@ -1,0 +1,12 @@
+.footer {
+    background: $grayColor;
+    padding: toRem(40) 0 toRem(60) 0;
+    &__container {
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 120%;
+        opacity: 0.6;
+    }
+}

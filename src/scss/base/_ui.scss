@@ -45,6 +45,11 @@
         padding: 0 toRem(12);
         width: toRem(113);
         min-height: toRem(35);
+        background: none;
+        &:hover {
+            background: $blueColor;
+            color: #fff;
+        }
     }
 }
 
@@ -67,9 +72,33 @@
         
 	}
     &_middle {
+        position: relative;
+        max-width: toRem(725);
         font-size: 54px;
         line-height: 120%;
-        
+        letter-spacing: 0.5px;
+        @include adaptiv-value('font-size', 54, 34, 1);
+        @media (max-width: $md3+px)  {
+            line-height: 112%;
+        }
+        span {
+            position: absolute;      
+            max-width: toRem(300);
+            line-height: 120%;
+            font-size: 20px;
+            font-weight: 400;
+            color: $blueColor;
+            text-transform: none;
+            letter-spacing: -0.6px;
+            @include adaptiv-value('bottom', 8, 2, 1);
+            @include adaptiv-value('left', 300, 200, 1);
+            @media (max-width: $md3+px)  {
+                position: static;
+                display: block;
+                font-size: 18px;
+                margin-top: toRem(14);
+            }
+        }
     }
     &_small {
         font-size: 36px;
@@ -96,5 +125,24 @@
     }
     .name {
         white-space: nowrap;
+    }
+}
+
+.arrow-slider {
+    width: toRem(36);
+    height: toRem(36);
+    background: $mainColorText;
+    border-radius: 100%;
+    padding: 0 toRem(14);
+    &.persons__arrow_prev, &.steps__arrow_prev{
+        transform: rotate(180deg);
+    }
+    &.disabled {
+        pointer-events: none;
+        cursor: default;
+        background: rgba(49, 49, 49, 0.2);
+    }
+    &:hover {
+        background: $yellowColor;
     }
 }

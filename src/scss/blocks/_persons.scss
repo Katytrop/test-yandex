@@ -1,0 +1,82 @@
+.persons {
+
+    &__container {
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__slider {
+        overflow:hidden; 
+        position:relative;
+    }
+
+    &__items {
+        width: 100%;
+        display:flex; 
+        transition: transform 0.5s ease;
+        margin-top: toRem(60);
+        @media (max-width: $md3+px)  {
+            margin-top: toRem(40);
+        }
+    }
+    &__controls {
+        position: absolute;
+        right: 0;
+        top: 8px;
+        display: flex;
+        align-items: center;
+        gap: toRem(14);
+        @media (max-width: $md2+px)  {
+            position: static;
+            width: min-content;
+            margin: toRem(42) auto 0;
+        }
+    }
+    &__arrow {
+        @media (min-width: $md2+px)  {
+            width: toRem(44);
+            height: toRem(44);
+        }
+        
+    }
+}
+
+.person-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    &__image {
+        width: clamp(244px, 35vw, 300px);
+        height: clamp(244px, 35vw, 300px);
+        margin-bottom: toRem(28);
+        @media (min-width: $md1+px)  {
+            width: toRem(320);
+            height: toRem(320);
+        }
+        @media (min-width: $md4+px)  {
+            
+        }
+        img {
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+    }
+    &__name {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+        margin-bottom: toRem(8);
+    }
+    &__title {
+        line-height: 120%;
+        opacity: 0.6;
+        margin-bottom: toRem(20);
+    }
+}
+  

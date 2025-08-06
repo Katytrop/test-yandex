@@ -80,6 +80,15 @@ body {
 			padding-top: toRem(34);
 		}
     }
+	&__steps {
+		padding: clamp(120px, 20vw, 200px) 0;
+    }
+	&__persons {
+		padding-bottom: toRem(140);
+		@media (max-width: $md3+px)  {
+			padding-bottom: toRem(100);
+		}
+    }
 }
 
 
@@ -89,7 +98,9 @@ body {
 @import 'blocks/running';
 @import 'blocks/lection';
 @import 'blocks/session';
-
+@import 'blocks/steps';
+@import 'blocks/persons';
+@import 'blocks/footer';
 
 // Подключаем блоки сайта =================================================================================================
     
