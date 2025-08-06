@@ -811,7 +811,7 @@ body {
     flex-direction: column;
     width: 100%;
     gap: 0;
-    background-image: url("/img/bg.png");
+    background-image: url("../img/bg.png");
   }
 }
 @media (max-width: 767.98px) {
@@ -916,7 +916,7 @@ body {
 @media (min-width: 991.98px) {
   .step {
     flex: 1 1 100%;
-    background-image: url("/img/bg.png");
+    background-image: url("../img/bg.png");
   }
 }
 @media (max-width: 991.98px) {
