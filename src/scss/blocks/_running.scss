@@ -1,7 +1,9 @@
 .running-line {
+    position: relative;
     overflow: hidden;
     background-color: $redColor;
     padding: toRem(18) toRem(12);
+    z-index: 15;
     @media (max-width: $md4+px)  {
         padding: toRem(10.5) toRem(10);
     }

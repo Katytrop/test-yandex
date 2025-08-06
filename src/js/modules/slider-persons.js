@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="person-slide__content">
                     <div class="person-slide__name">${participant.name}</div>
                     <div class="person-slide__title">${participant.title}</div>
-                    <button class="btn btn_small">Подробнее</button>
+                    <a href="" class="btn btn_small">Подробнее</a>
                 </div>
             `;
             sliderPersons.appendChild(slide);
@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const slideWidth = slides[0]?.offsetWidth || 0;
         sliderPersons.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 
-        // Определим номер текущего последнего видимого участника
         let lastVisibleIndex = currentSlide + visibleSlides;
         if (lastVisibleIndex > slideCount) lastVisibleIndex = slideCount;
 
@@ -87,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(autoScroll);
         autoScroll = setInterval(() => {
             nextSlide();
-        }, 3000);
+        }, 4000);
     };
 
     next.addEventListener('click', () => {

@@ -46,6 +46,7 @@
         width: toRem(113);
         min-height: toRem(35);
         background: none;
+        color: $blueColor;
         &:hover {
             background: $blueColor;
             color: #fff;

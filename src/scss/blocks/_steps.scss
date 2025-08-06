@@ -37,7 +37,7 @@
             flex-direction: column;
             width: 100%;
             gap: 0;
-            background-image: url('./../../img/steps/bg.png');
+            background-image: url('./../../img/bg.png');
         }
         @media (max-width: $md3+px)  {
             padding-top: toRem(40);
@@ -65,9 +65,15 @@
     }
     &__image {
         position: absolute;
-        right: -63px;
+        right: -300px;
         bottom: 0;
         z-index: 5;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        &.animate {
+            animation: fly-in 2s ease-out forwards;
+            opacity: 1;
+        }
         @media (max-width: $md2+px)  {
             right: -35px;
             top: 34%;
@@ -120,7 +126,7 @@
     padding: toRem(20) toRem(21) toRem(20) toRem(20);
     @media (min-width: $md2+px)  {
         flex: 1 1 100%;
-        background-image: url('./../../img/steps/bg.png');
+        background-image: url('./../../img/bg.png');
     }
     @media (max-width: $md2+px)  {
         width: 60%;
@@ -159,4 +165,17 @@
     }
 
     
+}
+
+@keyframes fly-in {
+    0% {
+        right: -300px;
+        transform: translateX(0) translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        right: -63px; 
+        transform: translateX(0) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
 }

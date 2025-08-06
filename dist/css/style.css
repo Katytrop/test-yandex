@@ -159,6 +159,7 @@ h6 {
   width: 5.65rem;
   min-height: 1.75rem;
   background: none;
+  color: #3057a2;
 }
 .btn_small:hover {
   background: #3057a2;
@@ -399,30 +400,108 @@ body {
     min-height: 35rem;
   }
 }
-.mainscreen .ibg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.mainscreen .ibg_mobile {
-  display: none;
-  background-position-x: 70%;
-}
-@media (max-width: 767.98px) {
-  .mainscreen .ibg_mobile {
-    display: block;
+@media (max-width: 1799px) {
+  .mainscreen__bg {
+    position: absolute;
+    top: 0;
+    left: 180px;
+    width: 100%;
+    height: 100%;
   }
 }
 @media (max-width: 767.98px) {
-  .mainscreen .ibg_desktop {
+  .mainscreen__bg {
+    left: 0;
+  }
+}
+.mainscreen .bg .city {
+  position: absolute;
+  bottom: 0;
+  right: -8px;
+  z-index: 10;
+}
+.mainscreen .bg .back {
+  position: absolute;
+  bottom: 0;
+  right: -8px;
+}
+.mainscreen .bg_mobile {
+  display: none;
+}
+.mainscreen .bg_mobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 479.98px) {
+  .mainscreen .bg_mobile img {
+    object-position: -437px;
+  }
+}
+@media (max-width: 767.98px) {
+  .mainscreen .bg_mobile {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .mainscreen .bg_desktop {
     display: none;
   }
 }
+.mainscreen__chess {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+@media (max-width: 1799px) {
+  .mainscreen__chess {
+    left: 180px;
+  }
+}
+@media (max-width: 767.98px) {
+  .mainscreen__chess {
+    display: none;
+  }
+}
+.mainscreen__chess .chess-piece {
+  position: absolute;
+  opacity: 0;
+  transform: translate(0, 0) rotate(0deg);
+  transition: opacity 0.3s ease;
+  will-change: transform;
+}
+.mainscreen__chess .chess-piece_pawn {
+  right: -5%;
+  top: 85%;
+  z-index: 15;
+}
+.mainscreen__chess .chess-piece_knight {
+  right: 400px;
+  top: 100%;
+  z-index: 15;
+}
+.mainscreen__chess .chess-piece_queen {
+  right: 0%;
+  top: -40%;
+}
+.mainscreen__chess .chess-piece_king {
+  right: 1100px;
+  top: -40%;
+}
 .mainscreen__container {
   height: 100%;
+}
+.mainscreen__body {
+  position: relative;
+  z-index: 15;
 }
 @media (min-width: 479.98px) {
   .mainscreen__body {
@@ -463,9 +542,11 @@ body {
 }
 
 .running-line {
+  position: relative;
   overflow: hidden;
   background-color: #f54932;
   padding: 0.9rem 0.6rem;
+  z-index: 15;
 }
 @media (max-width: 479.98px) {
   .running-line {
@@ -518,6 +599,11 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+.lection {
+  position: relative;
+  background: #fff;
+  z-index: 15;
 }
 .lection__body {
   display: flex;
@@ -726,7 +812,7 @@ body {
     flex-direction: column;
     width: 100%;
     gap: 0;
-    background-image: url("./../../img/steps/bg.png");
+    background-image: url("./../../img/bg.png");
   }
 }
 @media (max-width: 767.98px) {
@@ -753,9 +839,15 @@ body {
 }
 .steps__image {
   position: absolute;
-  right: -63px;
+  right: -300px;
   bottom: 0;
   z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.steps__image.animate {
+  animation: fly-in 2s ease-out forwards;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .steps__image {
@@ -824,7 +916,7 @@ body {
 @media (min-width: 991.98px) {
   .step {
     flex: 1 1 100%;
-    background-image: url("./../../img/steps/bg.png");
+    background-image: url("./../../img/bg.png");
   }
 }
 @media (max-width: 991.98px) {
@@ -867,6 +959,18 @@ body {
   }
 }
 
+@keyframes fly-in {
+  0% {
+    right: -300px;
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    right: -63px;
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
 .persons__body {
   position: relative;
 }

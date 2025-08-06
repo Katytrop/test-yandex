@@ -5,18 +5,48 @@
     @media (min-width: $md3+px)  {
         min-height: toRem(700);
     }
-    .ibg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
+    &__bg {
+        @media (max-width: 1799px)  {
+            position: absolute;
+            top: 0;
+            left: 180px;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: $md3+px)  {
+            left: 0;
+        }
+    }
+    .bg {
+        .city {
+            position: absolute;
+            bottom: 0;
+            right: -8px;
+            z-index: 10;
+        }
+        .back {
+            position: absolute;
+            bottom: 0;
+            right: -8px;
+        }
         &_mobile {
             display: none;
-            background-position-x: 70%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @media (max-width: $md4+px)  {
+                    object-position: -437px;
+                }
+                
+            }
             @media (max-width: $md3+px)  {
                 display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                right: 0;
+                bottom: 0;
             }
         }
         &_desktop {
@@ -25,12 +55,52 @@
             }
         }
     }
+    &__chess {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        @media (max-width: 1799px)  {
+            left: 180px;
+        }
+        @media (max-width: $md3+px)  {
+            display: none;
+        }
+        .chess-piece {
+            position: absolute;
+            opacity: 0;
+            transform: translate(0, 0) rotate(0deg);
+            transition: opacity 0.3s ease;
+            will-change: transform;
+            &_pawn {
+                right: -5%;
+                top: 85%;
+                z-index: 15;
+            }
+            &_knight {
+                right: 400px;
+                top: 100%;
+                z-index: 15;
+            }
+            &_queen {
+                right: 0%;
+                top: -40%;
+            }
+            &_king {
+                right: 1100px;
+                top: -40%;
+            }
+        }
+    }
     &__container {
         height: 100%;
     }
 
     &__body {
-        //max-width: 100%;
+        position: relative;
+        z-index: 15;
         @media (min-width: $md4+px)  {
             max-width: toRem(480);
         }
