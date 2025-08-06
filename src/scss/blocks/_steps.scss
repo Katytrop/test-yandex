@@ -37,7 +37,7 @@
             flex-direction: column;
             width: 100%;
             gap: 0;
-            background-image: url('/img/bg.png');
+            background-image: url('../img/bg.png');
         }
         @media (max-width: $md3+px)  {
             padding-top: toRem(40);
@@ -127,7 +127,7 @@
     padding: toRem(20) toRem(21) toRem(20) toRem(20);
     @media (min-width: $md2+px)  {
         flex: 1 1 100%;
-        background-image: url('/img/bg.png');
+        background-image: url('../img/bg.png');
     }
     @media (max-width: $md2+px)  {
         width: 60%;
